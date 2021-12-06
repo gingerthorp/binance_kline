@@ -46,8 +46,8 @@ class BinanceKline:
             cursor = conn.cursor()
             cursor.execute("SELECT name FROM sqlite_master WHERE type='table';")
 
-            exclusive_sql_list = cursor.fetchall()
-            exclusive_list = [table[0] for table in exclusive_sql_list]
+            exclusive_list = cursor.fetchall()
+            exclusive_list = [table[0] for table in exclusive_list]
 
         for symbol in tqdm(symbols):
 
